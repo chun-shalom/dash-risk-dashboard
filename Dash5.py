@@ -265,7 +265,7 @@ def _heatmap(year, is_dark):
     dfy = wide[wide["year"] == year].copy()
     if dfy.empty:
         return go.Figure()
-    fig = px.imshow(dfy[CATS].T, color_continuous_scale=["#f7fbff", "#deebf7", "#9ecae1","#3182bd","#08519c"],
+    fig = px.imshow(dfy[CATS].T, color_continuous_scale=["#fff5f0", "#fcbba1","#fc9272","#ef3b2c","#99000d"],
                     labels=dict(x="公司", y="风险类别", color="得分"))
     fig.update_layout(
         title=f"{year} 风险维度热力图",
