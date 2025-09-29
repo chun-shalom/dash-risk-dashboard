@@ -9,7 +9,8 @@ import plotly.graph_objects as go
 from itertools import cycle
 
 # ===== 1) 基础配置和数据加载 (保持不变) =====
-CSV_PATH = Path(__file__).parent / "data" / "doc_risk_scores_k7.csv"
+CSV_PATH = os.path.join(os.path.dirname(__file__), "data", "doc_risk_scores_k7.csv")
+
 
 CATS = ["市场风险", "信用风险", "操作风险", "法律合规风险", "技术风险"]
 
